@@ -7,6 +7,31 @@ function App() {
   const [switch2, setSwitch2] = useState(false);
   const [switch3, setSwitch3] = useState(false);
 
+  // ALERT MESSAGE MANAGEMENT
+  let alertColor = "result red";
+  let alertMessage = "NO WAY";
+
+  if (switch1 && switch2 && switch3) {
+    alertColor = "result green";
+    alertMessage = "GO !";
+  }
+
+  //SWITCHS MANAGEMENT
+
+  let switch1State = "switchOff";
+  let switch2State = "switchOff";
+  let switch3State = "switchOff";
+
+  if (switch1) {
+    switch1State = "switchOn";
+  }
+  if (switch2) {
+    switch2State = "switchOn";
+  }
+  if (switch3) {
+    switch3State = "switchOn";
+  }
+
   return (
     <div className="App">
       <header>
@@ -16,24 +41,69 @@ function App() {
         </section>
       </header>
       <main>
-        <section className="container">
-          <section className="selectors">
-            <div>
-              <div className="selector">ON</div>
-              <div className="selector">ON</div>
-              <div className="selector selected">ON</div>
-            </div>
-            <div>
-              <div className="selector">OFF</div>
-              <div className="selector selected">OFF</div>
-              <div className="selector">OFF</div>
-            </div>
-          </section>
-          <section>
-            <div className="result red">NO WAY</div>
-          </section>
+        {/* SWITCHS */}
+        <section>
+          <div className={switch1State}>
+            <span
+              onClick={() => {
+                setSwitch1(true);
+              }}
+            >
+              ON
+            </span>
+            <span
+              onClick={() => {
+                setSwitch1(false);
+              }}
+            >
+              OFF
+            </span>
+          </div>
+          <div className={switch2State}>
+            <span
+              onClick={() => {
+                setSwitch2(true);
+              }}
+            >
+              ON
+            </span>
+            <span
+              onClick={() => {
+                setSwitch2(false);
+              }}
+            >
+              OFF
+            </span>
+          </div>
+          <div className={switch3State}>
+            <span
+              onClick={() => {
+                setSwitch3(true);
+              }}
+            >
+              ON
+            </span>
+            <span
+              onClick={() => {
+                setSwitch3(false);
+              }}
+            >
+              OFF
+            </span>
+          </div>
+        </section>
+
+        {/* ALERT */}
+        <section>
+          <div className={alertColor}>{alertMessage}</div>
         </section>
       </main>
+      <footer>
+        <p>
+          Made with React at <span className="bold">Le Reacteur</span> by{" "}
+          <span className="bold">Freemulder</span>{" "}
+        </p>
+      </footer>
     </div>
   );
 }

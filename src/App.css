@@ -33,40 +33,78 @@ header > img {
 }
 
 /* -------------------
---------MAIN--------
+--------SWITCH--------
 ------------------- */
-
-.container {
+/* MAIN */
+main {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  width: 100vw;
+  gap: 445px;
   height: 70vh;
 }
-
-.selectors {
+/* ON */
+.switchOn {
   display: flex;
-  gap: 50px;
+  gap: 70px;
+  margin: 10px 10px;
 }
-.selector {
+
+.switchOn span {
+  cursor: pointer;
   display: flex;
-  align-items: center;
   justify-content: center;
-  margin-top: 20px;
+  align-items: center;
+  font-size: 36px;
   width: 120px;
   height: 70px;
-  border: 1px lightgray solid;
   border-radius: 6px;
-  color: #5c48d3;
-  font-size: 36px;
+  border: 1px solid lightgray;
 }
 
-.selected {
+.switchOn span:first-child {
   background-color: #5c48d3;
   color: white;
 }
 
+.switchOn span:last-child {
+  color: #5c48d3;
+}
+
+/* OFF */
+.switchOff {
+  display: flex;
+  gap: 70px;
+  margin: 10px 10px;
+}
+
+.switchOff span {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  width: 120px;
+  height: 70px;
+  border-radius: 6px;
+  border: 1px solid lightgray;
+}
+
+.switchOff span:first-child {
+  color: #5c48d3;
+}
+
+.switchOff span:last-child {
+  background-color: #5c48d3;
+  color: white;
+}
+
+/* -------------------
+--------ALERT--------
+------------------- */
+
 .result {
+  cursor: default;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -76,9 +114,21 @@ header > img {
   color: white;
   font-size: 48px;
 }
+
 .red {
   background-color: red;
 }
 .green {
   background-color: green;
+}
+
+/* -------------------
+--------FOOTER--------
+------------------- */
+footer p {
+  text-align: center;
+}
+
+.bold {
+  font-weight: bold;
 }
