@@ -91,6 +91,16 @@ function App() {
               OFF
             </span>
           </div>
+          <div
+            className="resetButton"
+            onClick={() => {
+              setSwitch1(false);
+              setSwitch2(false);
+              setSwitch3(false);
+            }}
+          >
+            SET ALL OFF !
+          </div>
         </section>
 
         {/* ALERT */}

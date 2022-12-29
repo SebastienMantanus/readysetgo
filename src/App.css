@@ -71,6 +71,11 @@ main {
   color: #5c48d3;
 }
 
+.switchOn span:last-child:hover {
+  color: #5c48d3;
+  background-color: #ececec;
+}
+
 /* OFF */
 .switchOff {
   display: flex;
@@ -94,7 +99,34 @@ main {
   color: #5c48d3;
 }
 
+.switchOff span:first-child:hover {
+  color: #5c48d3;
+  background-color: #ececec;
+}
+
 .switchOff span:last-child {
+  background-color: #5c48d3;
+  color: white;
+}
+
+/* -------------------
+--------RESET--------
+------------------- */
+.resetButton {
+  margin: 20px 10px;
+  color: #5c48d3;
+  background-color: #ececec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 25px;
+  width: calc(100%-30px);
+  height: 70px;
+  border-radius: 6px;
+  border: 1px solid lightgray;
+}
+.resetButton:hover {
   background-color: #5c48d3;
   color: white;
 }
